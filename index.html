@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DebtBook — Privacy Policy & Terms of Service</title>
+<style>
+  /* Layout: one reading column, sticky tab header, each policy section as a stack of titled clauses */
+  :root{
+    --bg:#ffffff; --text:#171a18; --muted:#58615b; --accent:#1c6e45; --on-accent:#ffffff;
+    --card:#f4f7f5; --border:#dde4df; --note-bg:#fff6e0; --note-border:#e6c777; --note-text:#4a3a0c;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#121411; --text:#eceee9; --muted:#a3aba5; --accent:#52d08c; --on-accent:#0b1f14;
+      --card:#1a1d19; --border:#2b302a; --note-bg:#2a2412; --note-border:#6b5a22; --note-text:#f0dfa8;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#121411; --text:#eceee9; --muted:#a3aba5; --accent:#52d08c; --on-accent:#0b1f14;
+    --card:#1a1d19; --border:#2b302a; --note-bg:#2a2412; --note-border:#6b5a22; --note-text:#f0dfa8;
+    color-scheme: dark;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-padding-top:calc(120px + env(safe-area-inset-top,0px));}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:"Source Sans 3",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    font-size:16px; line-height:1.65;
+  }
+  body::before{
+    content:""; position:fixed; inset:0 0 auto; height:env(safe-area-inset-top,0px);
+    z-index:20; background:var(--bg);
+  }
+  .gutter{
+    padding-left:max(16px, env(safe-area-inset-left,0px));
+    padding-right:max(16px, env(safe-area-inset-right,0px));
+  }
+  header{
+    position:sticky; top:env(safe-area-inset-top,0px); z-index:10;
+    background:var(--bg); border-bottom:1px solid var(--border);
+    padding-block:14px 12px;
+  }
+  .bar{max-width:700px; margin:0 auto;}
+  .brand{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; margin-bottom:10px;}
+  .brand strong{font-family:"Source Serif 4",Georgia,serif; font-size:20px; letter-spacing:-0.01em;}
+  .brand span{color:var(--muted); font-size:13px;}
+  nav{display:flex; gap:8px; flex-wrap:wrap;}
+  nav a{
+    flex:1 1 0; min-width:max-content; text-align:center; padding:8px 12px; border-radius:8px;
+    border:1px solid var(--border); color:var(--text); text-decoration:none;
+    font-size:14px; font-weight:600;
+  }
+  nav a:focus-visible, a:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+  nav a.active{background:var(--accent); color:var(--on-accent); border-color:var(--accent);}
+  main{max-width:700px; margin:0 auto; padding-block:28px 56px;}
+  section{margin-bottom:48px;}
+  h2{font-family:"Source Serif 4",Georgia,serif; font-size:28px; line-height:1.2; margin:4px 0 12px; text-wrap:balance;}
+  h3{font-size:16px; margin:0 0 6px; color:var(--accent);}
+  p{margin:0 0 10px;}
+  ul{margin:0 0 10px; padding-left:20px;}
+  li{margin-bottom:4px;}
+  .muted{color:var(--muted); font-size:14px;}
+  .clause{border-top:1px solid var(--border); padding-block:16px 6px;}
+  .clause:first-of-type{margin-top:12px;}
+  .note{
+    background:var(--note-bg); border:1px solid var(--note-border); color:var(--note-text);
+    border-radius:10px; padding:12px 14px; margin:14px 0; font-size:15px;
+  }
+  .steps{counter-reset:s; list-style:none; padding:0;}
+  .steps li{counter-increment:s; padding-left:34px; position:relative; margin-bottom:10px;}
+  .steps li::before{
+    content:counter(s); position:absolute; left:0; top:1px; width:24px; height:24px; border-radius:50%;
+    background:var(--card); border:1px solid var(--border); text-align:center; font-size:13px; line-height:22px; font-weight:600;
+  }
+  a{color:var(--accent); overflow-wrap:anywhere;}
+  strong{font-weight:600;}
+  footer{text-align:center; color:var(--muted); font-size:13px; padding-block:24px;}
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:wght@600&display=swap">
+
+</head>
+<body>
+<header class="gutter">
+  <div class="bar">
+    <div class="brand"><strong>DebtBook</strong><span>Craftware Studios</span></div>
+    <nav>
+      <a href="#privacy" id="nav-privacy" class="active">Privacy Policy</a>
+      <a href="#terms" id="nav-terms">Terms of Service</a>
+      <a href="#delete-account" id="nav-delete-account">Delete account</a>
+    </nav>
+  </div>
+</header>
+
+<main class="gutter">
+
+<section id="privacy">
+  <p class="muted">Last updated: October 29, 2026</p>
+  <h2>Privacy Policy</h2>
+  <p>This policy explains what <strong>Craftware Studios</strong> ("we", "us") collects when you use the <strong>DebtBook</strong> mobile app ("the App"), how we use it, and the choices you have. We handle personal data in line with the Nigeria Data Protection Act 2023.</p>
+
+  <div class="clause">
+    <h3>1. Information we collect</h3>
+    <p><strong>Account details.</strong> If you log in or sign up, we receive your email address and, with Google, your name and profile photo. Accounts are managed by Firebase Authentication. We never see or store your password.</p>
+    <p><strong>Your business records.</strong> The App is a ledger. You enter your business name, logo, address and phone number, plus the names, phone numbers and credit and payment records of your customers. These stay on your phone. If you log in, they are also copied to our cloud database (Cloud Firestore) under your account as your free cloud backup.</p>
+    <p><strong>Purchase records.</strong> When you buy Pro, we record your account email, the plan, the amount, the date and the payment reference in our database (Supabase). Card, bank and USSD details are handled by Paystack and never reach us.</p>
+    <p><strong>Usage and crash data.</strong> Firebase Analytics and Crashlytics tell us which features are used and why the App crashes. We do not send customer names, phone numbers or amounts to them.</p>
+    <p><strong>Ads.</strong> Free plan users see banner ads from Google AdMob, which may use an advertising ID and device information. In regions where it is required, the App asks for your consent first. Pro users see no ads.</p>
+    <p><strong>Stays on your phone.</strong> Your fingerprint or device PIN for App Lock is handled by Android and never reaches us. Staff PINs are stored only on your device, in hashed form.</p>
+  </div>
+
+  <div class="clause">
+    <h3>2. How we use it</h3>
+    <ul>
+      <li>To run the App: customers, balances, payments, receipts, statements and reminders</li>
+      <li>To back up your records and restore them on a new phone</li>
+      <li>To confirm purchases and switch Pro features on or off for your account</li>
+      <li>To fix bugs, understand which features people use, and answer support requests</li>
+      <li>To show ads to free plan users</li>
+    </ul>
+    <p>We do not sell your data or your customers' data.</p>
+  </div>
+
+  <div class="clause">
+    <h3>3. Your customers' data</h3>
+    <p>For the customer names, phone numbers and records you enter, you decide what is collected and why, and we store and back it up for you. Make sure you have a legitimate reason to keep those details and to contact those customers. The reminder feature opens WhatsApp, SMS or the phone dialer on your device. We do not send messages on your behalf.</p>
+  </div>
+
+  <div class="clause">
+    <h3>4. Services we use</h3>
+    <ul>
+      <li><strong>Google Firebase:</strong> sign-in, cloud backup, analytics and crash reports</li>
+      <li><strong>Google AdMob:</strong> banner ads on the free plan</li>
+      <li><strong>Paystack:</strong> payment processing for Pro</li>
+      <li><strong>Supabase:</strong> purchase records and Pro status</li>
+    </ul>
+    <p>Each of these has its own privacy policy. Your data may be processed on servers outside Nigeria.</p>
+  </div>
+
+  <div class="clause">
+    <h3>5. Storage, security and retention</h3>
+    <p>Your records live on your phone. Cloud copies are protected by access rules so that only your logged-in account can read them. We keep your cloud backup and account details until you delete your account. After you delete it, we remove them within 30 days. We may keep minimal payment records if the law requires it or to settle a payment dispute. No system is perfectly secure, so keep your phone and password safe.</p>
+  </div>
+
+  <div class="clause">
+    <h3>6. Your rights</h3>
+    <p>Under the Nigeria Data Protection Act 2023 you can ask us to access, correct, delete, restrict or move your personal data, and to stop using it for something you did not agree to. You can also:</p>
+    <ul>
+      <li>Use the App without an account. Cloud backup is optional.</li>
+      <li>Delete data on your phone from Settings, Data & Backup, Delete local data.</li>
+      <li>Delete your account and cloud data. See <a href="#delete-account">Delete account</a> below.</li>
+      <li>Log out at any time. Your data stays on your phone.</li>
+    </ul>
+  </div>
+
+  <div class="clause">
+    <h3>7. Children</h3>
+    <p>The App is for business owners and is not meant for anyone under 18. We do not knowingly collect data from children.</p>
+  </div>
+
+  <div class="clause">
+    <h3>8. Changes</h3>
+    <p>If we change this policy we update the date at the top. For significant changes we will also tell you in the App.</p>
+  </div>
+
+  <div class="clause">
+    <h3>9. Contact</h3>
+    <p>Privacy questions and data requests: <a href="mailto:supportdebtbookapp@gmail.com">supportdebtbookapp@gmail.com</a></p>
+  </div>
+</section>
+
+<section id="terms">
+  <p class="muted">Last updated: October 29, 2026</p>
+  <h2>Terms of Service</h2>
+  <p>These terms apply when you use DebtBook, provided by <strong>Craftware Studios</strong>. By using the App you agree to them.</p>
+
+  <div class="clause">
+    <h3>1. What DebtBook does</h3>
+    <p>DebtBook helps you record customer credit sales, payments and balances, send reminders and share receipts. It is a record-keeping tool. It is not an accounting, tax, banking or legal service.</p>
+  </div>
+
+  <div class="clause">
+    <h3>2. Free plan and Pro</h3>
+    <ul>
+      <li><strong>Free:</strong> up to 20 customers, manual reminders by WhatsApp, SMS or call, plain receipts and statements, cloud backup, and ads.</li>
+      <li><strong>Pro:</strong> unlimited customers, automatic and bulk reminders, receipts and statements with your business name and logo, and no ads. Multiple shops and staff accounts are also included.</li>
+    </ul>
+    <p>Features and limits may change. If you change what a plan includes for existing Pro users, we will tell you first.</p>
+  </div>
+
+  <div class="clause">
+    <h3>3. Buying Pro</h3>
+    <ul>
+      <li>You must be logged in to buy, so the purchase attaches to your account. Prices are shown on the Upgrade screen before you pay.</li>
+      <li>Payments are processed by Paystack by card, bank transfer or USSD.</li>
+      <li><strong>Monthly and Yearly plans do not renew automatically.</strong> When time runs out you return to the free plan unless you renew.</li>
+      <li><strong>Lifetime</strong> means Pro for as long as DebtBook is offered. If we ever stop offering the App, we will give notice.</li>
+      <li>If you move from Monthly or Yearly to Lifetime, or renew early, credit for your unused time may be applied. The final price is shown before you pay.</li>
+    </ul>
+  </div>
+
+  <div class="clause">
+    <h3>4. Refunds</h3>
+    <p>We refund you if, within 7 days of payment, you report any of these:</p>
+    <ul>
+      <li>a duplicate charge</li>
+      <li>a payment that took your money but did not activate Pro</li>
+      <li>a failed payment that was still charged</li>
+    </ul>
+    <p>We do not give refunds for a change of mind after Pro is active. To ask, email <a href="mailto:supportdebtbookapp@gmail.com">supportdebtbookapp@gmail.com</a> with your account email and the payment reference.</p>
+  </div>
+
+  <div class="clause">
+    <h3>5. When Pro ends</h3>
+    <p>When a plan expires or you log out, the App returns to the free plan. Your records are never deleted for this reason. If you have more than 20 customers, you keep all of them, but you cannot add new ones until you upgrade or are under the limit.</p>
+  </div>
+
+  <div class="clause">
+    <h3>6. Your responsibilities</h3>
+    <ul>
+      <li>You are responsible for the accuracy of the records you enter and for any decisions you make from them.</li>
+      <li>You must have the right to store your customers' details and to contact them. Do not use reminders to harass or spam anyone.</li>
+      <li>Keep your phone and account credentials secure.</li>
+      <li>Do not use the App for anything unlawful, or try to break it or bypass its limits.</li>
+    </ul>
+  </div>
+
+  <div class="clause">
+    <h3>7. Backups and data loss</h3>
+    <p>The App offers cloud backup and a backup file you can save yourself. Backups depend on your phone, your connection and your account, so keep your own copies of records that matter. We are not liable for loss caused by a lost or damaged phone, uninstalling the App, losing account access, or a backup that was never completed.</p>
+  </div>
+
+  <div class="clause">
+    <h3>8. Your account</h3>
+    <p>You can delete your account at any time. See <a href="#delete-account">Delete account</a>. We may suspend or end access to cloud features for accounts that break these terms or abuse the service.</p>
+  </div>
+
+  <div class="clause">
+    <h3>9. No warranty and limits of liability</h3>
+    <p>The App is provided "as is". We do not promise it will be uninterrupted or error-free. To the extent the law allows, Craftware Studios is not liable for indirect or consequential losses, including lost profits or unpaid customer debts. Nothing here limits rights you have under Nigerian law that cannot be limited.</p>
+  </div>
+
+  <div class="clause">
+    <h3>10. Governing law</h3>
+    <p>These terms are governed by the laws of the Federal Republic of Nigeria.</p>
+  </div>
+
+  <div class="clause">
+    <h3>11. Changes</h3>
+    <p>We may update these terms. The date at the top shows the latest version, and continuing to use the App after a change means you accept it.</p>
+  </div>
+
+  <div class="clause">
+    <h3>12. Contact</h3>
+    <p><a href="mailto:supportdebtbookapp@gmail.com">supportdebtbookapp@gmail.com</a></p>
+  </div>
+</section>
+
+<section id="delete-account">
+  <p class="muted">Last updated: October 29, 2026</p>
+  <h2>Delete your DebtBook account</h2>
+  <p>You can delete your account and the cloud data attached to it at any time, whether or not the App is still installed.</p>
+
+  <div class="clause">
+    <h3>In the App</h3>
+    <ol class="steps">
+      <li>Open DebtBook, then Settings.</li>
+      <li>Tap <strong>Delete account</strong> and confirm.</li>
+    </ol>
+  </div>
+
+  <div class="clause">
+    <h3>By email</h3>
+    <p>If you cannot open the App, email <a href="mailto:supportdebtbookapp@gmail.com">supportdebtbookapp@gmail.com</a> from the address you signed up with. Use the subject "Delete my DebtBook account". We may ask you to confirm it is you.</p>
+  </div>
+
+  <div class="clause">
+    <h3>What gets deleted</h3>
+    <ul>
+      <li>Your login, profile and the cloud backup of your customers, transactions, shops, staff and business profile</li>
+      <li>Done within 30 days of your request</li>
+    </ul>
+    <p>Minimal payment records may be kept if the law requires it or to settle a payment dispute. Records on your own phone are not touched by an email request. Remove them from Settings, Data & Backup, Delete local data, or by uninstalling the App.</p>
+  </div>
+
+  <div class="note"><strong>Before you delete.</strong> Deleting your account cannot be undone. If you have an active Pro plan, it will be lost, and refunds follow the rules in the Terms of Service.</div>
+</section>
+
+</main>
+
+<footer class="gutter">© 2026 Craftware Studios. DebtBook.</footer>
+
+<script>
+  var ids = ['privacy', 'terms', 'delete-account'];
+  function setActive(id){
+    ids.forEach(function(k){
+      var el = document.getElementById('nav-' + k);
+      if (el) el.classList.toggle('active', k === id);
+    });
+  }
+  function fromHash(){
+    var id = location.hash.replace('#', '');
+    setActive(ids.indexOf(id) >= 0 ? id : 'privacy');
+  }
+  window.addEventListener('hashchange', fromHash);
+  fromHash();
+</script>
+</body>
+</html>
